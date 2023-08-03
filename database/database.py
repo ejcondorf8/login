@@ -3,7 +3,7 @@ from peewee import *
 from decouple import config
 import datetime
 database=MySQLDatabase(
-    'test',
+    'users1',
     user='root',
     password=config('clave'),
     port=3306

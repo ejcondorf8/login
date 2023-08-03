@@ -1,4 +1,4 @@
-from flask import Flask ,render_template,request,redirect,url_for
+from flask import Flask ,render_template,request,redirect,url_for,flash
 from database.database import *
 
 
@@ -23,6 +23,8 @@ def register():
     if email and password:
         try:
             user=User.create(email=email,password=password)
+            print("PROBANDO")
+            
             return redirect(url_for('login'))
         except  Exception as e : 
             return redirect(url_for('register'))
@@ -44,6 +46,7 @@ def login():
     try:
         if email and password:
             usuario = (User.get(User.email == email)) and (User.get(User.password == password))
+            print('PRUEBAS')
             print(usuario)
             return redirect('http://localhost:5173')
     except Exception as e :
