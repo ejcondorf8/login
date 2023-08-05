@@ -1,4 +1,4 @@
-Proyecto de Inicio de Sesión con Flask, HTML Nativo y MySQL
+Proyecto de Inicio de Sesión con Flask, HTML Nativo y PostgresSQL
 Este proyecto es un sistema de inicio de sesión simple desarrollado con Flask, utilizando HTML nativo para la interfaz de usuario y MySQL como base de datos para almacenar la información de los usuarios.
 
 Características
