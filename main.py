@@ -23,15 +23,14 @@ def register():
     if email and password:
         try:
             user=User.create(email=email,password=password)
-            print("PROBANDO")
-            
             return redirect(url_for('login'))
         except  Exception as e : 
-            return redirect(url_for('register'))
-
+            return redirect(url_for('error'))
     return render_template('register.html')
 
-
+@app.route('/error',methods=['GET'])
+def error():
+    return render_template('error.html')
 
 
 
@@ -43,14 +42,18 @@ def login():
     email=request.form.get('email')
     password=request.form.get('password')
 
-    try:
-        if email and password:
+    
+    if email and password:
             usuario = (User.get(User.email == email)) and (User.get(User.password == password))
             print('PRUEBAS')
             print(usuario)
-            return redirect('http://localhost:5173')
-    except Exception as e :
-        return redirect(url_for('register'))
+            try:
+                prueba= redirect('http://localhost:5173')
+                if prueba.status_code==302:
+                    raise Exception(redirect(url_for('error')))
+                return prueba
+            except Exception as e :
+                return redirect(url_for('error'))
 
     return render_template('login.html')
 
