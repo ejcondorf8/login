@@ -2,11 +2,12 @@
 from peewee import *
 from decouple import config
 import datetime
-database=MySQLDatabase(
+database=PostgresqlDatabase(
     'users1',
-    user='root',
-    password=config('clave'),
-    port=3306
+    user='fl0user',
+    password=config('clave1'),
+    port=5432,
+    host='ep-late-haze-49514607.ap-southeast-1.aws.neon.tech'
 )
 print(database)
 
