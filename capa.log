@@ -1,0 +1,17 @@
+LEVELDEBUG 2023-08-06 06:12:55,825 FILE [log.py PRUEBA ]
+LEVELINFO 2023-08-06 06:30:05,619 FILE [_internal.py [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 ]
+LEVELINFO 2023-08-06 06:30:05,620 FILE [_internal.py [33mPress CTRL+C to quit[0m ]
+LEVELINFO 2023-08-06 06:30:05,624 FILE [_internal.py  * Restarting with stat ]
+LEVELWARNING 2023-08-06 06:30:08,535 FILE [_internal.py  * Debugger is active! ]
+LEVELINFO 2023-08-06 06:30:08,553 FILE [_internal.py  * Debugger PIN: 335-415-501 ]
+LEVELINFO 2023-08-06 06:30:40,332 FILE [_internal.py [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 ]
+LEVELINFO 2023-08-06 06:30:40,333 FILE [_internal.py [33mPress CTRL+C to quit[0m ]
+LEVELINFO 2023-08-06 06:30:40,335 FILE [_internal.py  * Restarting with stat ]
+LEVELWARNING 2023-08-06 06:30:43,566 FILE [_internal.py  * Debugger is active! ]
+LEVELINFO 2023-08-06 06:30:43,585 FILE [_internal.py  * Debugger PIN: 335-415-501 ]
+LEVELINFO 2023-08-06 06:30:56,252 FILE [_internal.py 127.0.0.1 - - [06/Aug/2023 06:30:56] "GET /register HTTP/1.1" 200 - ]
+LEVELINFO 2023-08-06 06:31:00,174 FILE [main.py ESTO ES UNA PRUEBA ]
+LEVELINFO 2023-08-06 06:31:00,178 FILE [_internal.py 127.0.0.1 - - [06/Aug/2023 06:31:00] "GET / HTTP/1.1" 200 - ]
+LEVELDEBUG 2023-08-06 06:38:30,403 FILE [log.py PRUEBA ]

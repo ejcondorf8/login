@@ -2,14 +2,24 @@
 from peewee import *
 from decouple import config
 import datetime
-database=PostgresqlDatabase(
-    'users1',
-    user='fl0user',
-    password=config('clave1'),
-    port=5432,
-    host='ep-late-haze-49514607.ap-southeast-1.aws.neon.tech'
-)
-print(database)
+
+class Conexion:
+    USER='fl0user'
+    PASSWORD='clave1'
+    PORT=5432
+    HOST='ep-late-haze-49514607.ap-southeast-1.aws.neon.tech'
+    DB='users1'
+    @classmethod
+    def obtenerConexion(cls):
+        database=PostgresqlDatabase(
+            cls.DB,
+            user=cls.USER,
+            password=config(cls.PASSWORD),
+            port=cls.PORT,
+            host=cls.HOST
+        )
+        return database
+
 
 
 class User(Model):
@@ -19,8 +29,8 @@ class User(Model):
 
 
     class Meta:
-        database=database
+        database=Conexion.obtenerConexion()
         db_table='users'
 
 
-database.create_tables([User])
+prueba=Conexion.obtenerConexion().create_tables([User])
