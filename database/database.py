@@ -2,7 +2,7 @@
 from peewee import *
 from decouple import config
 import datetime
-
+from controlador import log
 class Conexion:
     USER='fl0user'
     PASSWORD='clave1'
@@ -18,6 +18,7 @@ class Conexion:
             port=cls.PORT,
             host=cls.HOST
         )
+        log.debug('CONEXION EXITOSA')
         return database
 
 

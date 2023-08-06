@@ -1,6 +1,6 @@
 from flask import Flask ,render_template,request,redirect,url_for,flash
 from database.database import *
-
+from controlador import log
 
 
 app=Flask(__name__)
@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 @app.route('/',methods=['GET'])
 def index():
-   
+    log.debug('hola')
     return render_template('index.html')
 
 
